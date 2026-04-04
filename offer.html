@@ -1,17 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Elevere | Pricing</title>
-  <meta name="description" content="The site, Shopify theme, Pinterest boards, and product cards should all read like one restrained editorial fashion system." />
-  <meta property="og:title" content="Elevere | Pricing" />
-  <meta property="og:description" content="The site, Shopify theme, Pinterest boards, and product cards should all read like one restrained editorial fashion system." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://elevstyle.com/" />
+  <title>Elevere | Offer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Cinzel:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
-  
 </head>
 <body>
   <main class="page">
@@ -20,55 +14,67 @@
         <span class="brand-mark"></span>
         <span class="brand-copy">
           <strong>Elevere</strong>
+          <span>Elegant serif wordmark or monogram.</span>
         </span>
       </a>
       <nav class="nav">
         <a class='button ghost' href='index.html'>Home</a>
-        <a class='button primary' href='offer.html'>Pricing</a>
-        <a class='button ghost' href='channels.html'>About</a>
+        <a class='button primary' href='offer.html'>Offer</a>
+        <a class='button ghost' href='checkout.html'>Checkout</a>
+        <a class='button ghost' href='channels.html'>Channels</a>
+        <a class='button ghost' href='thank-you.html'>Thank You</a>
       </nav>
     </header>
     
     <section class="hero">
       <article class="hero-card">
-        <div class="eyebrow">Pricing</div>
-        <h1>Simple, transparent pricing.</h1>
-        <p>Choose the plan that fits your needs. Every purchase includes instant digital delivery and dedicated support.</p>
+        <div class="eyebrow">Offer Page System</div>
+        <h1>Elevere Offer Architecture</h1>
+        <p>This page shows the designed offer stack, pricing hierarchy, and product or service card rules that should remain aligned across owned and third-party surfaces.</p>
       </article>
       <aside class="hero-card">
-        <h2>What&rsquo;s Included</h2>
-        <ul>
-          <li>Instant digital delivery</li>
-          <li>Dedicated support via <a href="mailto:support@elevstyle.com">support@elevstyle.com</a></li>
-          <li>14-day satisfaction guarantee</li>
-        </ul>
+        <h2>Inventory Rules</h2>
+        <ul><li>Each product page needs hero image, texture detail image, and styled outfit image in that order.</li><li>Cards show fit, fabric, care, delivery estimate, and wear-with recommendations.</li><li>Collections are named by wardrobe use case, not generic dropship labels.</li></ul>
       </aside>
     </section>
     <section class="panel" style="margin-top:24px;">
-      <h2>Choose Your Plan</h2>
+      <h2>Offer Cards</h2>
       <div class="offer-grid" style="margin-top:18px;"><article class='offer-card'><h3>Hero SKU Preview</h3><div class='price'>$59</div><p>Reserve one of the first hero SKUs and capture size/style preferences before storefront work starts.</p><ul><li>Preference capture for one hero SKU</li><li>Collection-fit and sizing notes</li><li>Priority notification for the first bounded drop</li></ul></article><article class='offer-card'><h3>Capsule Bundle Reservation</h3><div class='price'>$119</div><p>Reserve one of the first two capsule bundles built around the initial hero SKUs.</p><ul><li>Bundle reservation and styling notes</li><li>Accessory pairing suggestions</li><li>Operator follow-up before any fulfillment handoff</li></ul></article></div>
     </section>
-    <section class="panel" style="margin-top:24px;">
-      <div class="actions" style="justify-content:center;">
-        <a class="button primary" href="./checkout.html">Proceed to Checkout</a>
-      </div>
-    </section>
     
-    <footer class="site-footer">
-      <div class="footer-note">&copy; 2026 Elevere. All rights reserved.</div>
-      <div class="footer-links">
-        <a href="./index.html">Home</a>
-        <a href="./offer.html">Pricing</a>
-        <a href="./channels.html">About</a>
-        <a href='mailto:support@elevstyle.com'>Contact</a>
-      </div>
-      <div class="footer-links" style="margin-top:8px;">
-        <a href="./privacy.html">Privacy</a>
-        <a href="./terms.html">Terms</a>
-        <a href="./refunds.html">Refunds</a>
-      </div>
-    </footer>
+    <div class="footer-note">Local deployment pack for Elevere. No launch without approval.</div>
   </main>
-  
+
+  <!-- ASI Analytics (lightweight, privacy-friendly) -->
+  <script>
+  (function(){
+    var bid = document.body.getAttribute('data-business-id') || 'unknown';
+    var page = location.pathname.split('/').pop() || 'index.html';
+    var key = 'asi_pv_' + bid;
+    try {
+      var data = JSON.parse(localStorage.getItem(key) || '{}');
+      data[page] = (data[page] || 0) + 1;
+      data._total = (data._total || 0) + 1;
+      data._last = new Date().toISOString();
+      data._ref = document.referrer || 'direct';
+      localStorage.setItem(key, JSON.stringify(data));
+    } catch(e) {}
+    // Beacon to analytics endpoint if configured
+    if (window.ASI_ANALYTICS_URL) {
+      var payload = JSON.stringify({
+        business_id: bid,
+        page: page,
+        referrer: document.referrer || 'direct',
+        timestamp: new Date().toISOString(),
+        ua: navigator.userAgent
+      });
+      try {
+        navigator.sendBeacon(window.ASI_ANALYTICS_URL, payload);
+      } catch(e) {
+        // Silent fail — analytics should never break the site
+      }
+    }
+  })();
+  </script>
 </body>
 </html>
