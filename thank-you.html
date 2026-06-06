@@ -1,86 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Thank You | Elevere</title>
-  <meta name="description" content="Discover timeless, elevated fashion pieces curated for the modern professional woman. Capsule wardrobes, workweek essentials, and weekend staples with effortless style.">
-  <meta property="og:title" content="Thank You | Elevere">
-  <meta property="og:description" content="Discover timeless, elevated fashion pieces curated for the modern professional woman. Capsule wardrobes, workweek essentials, and weekend staples with effortless style.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://elevstyle.com/">
-  <meta property="og:image" content="https://elevstyle.com/assets/og-image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Thank You | Elevere">
-  <meta name="twitter:description" content="Discover timeless, elevated fashion pieces curated for the modern professional woman. Capsule wardrobes, workweek essentials, and weekend staples with effortless style.">
-  <meta name="twitter:image" content="https://elevstyle.com/assets/og-image.png">
-  <link rel="icon" href="./assets/favicon.ico">
-  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Cinzel:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elevere | Thank You</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Cinzel:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
-<body data-business-id="b5">
-  <header class="site-header">
-    <div class="container">
-      <a href="./index.html" class="logo"><span>E</span>levere</a>
-      <nav class="nav-links">
-    <a href="./index.html" class="active">Home</a>
-    <a href="./offer.html">Catalog</a>
-    <a href="./checkout.html">Store Status</a>
+<body class="mode-luxury">
+  <main class="page">
+    <header class="header">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark"></span>
+        <span class="brand-copy">
+          <strong>Elevere</strong>
+          <span>Elegant serif wordmark or monogram.</span>
+        </span>
+      </a>
+      <nav class="nav">
+        <a class='button ghost' href='index.html'>Home</a>
+        <a class='button ghost' href='offer.html'>Offer</a>
+        <a class='button ghost' href='checkout.html'>Checkout</a>
+        <a class='button ghost' href='channels.html'>Channels</a>
+        <a class='button primary' href='thank-you.html'>Thank You</a>
       </nav>
-    </div>
-  </header>
-  <section class="hero-section">
-    <div class="container">
-      <div class="hero-content">
-        <h1>Thank You!</h1>
-        <p>Your purchase is confirmed. Check your email for delivery details and next steps.</p>
-        <div class="btn-group">
-          <a href="./index.html" class="btn btn-primary">Back to Home</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">What Happens Next</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <h3>Check Your Email</h3>
-          <p>You'll receive a confirmation email with your receipt and access details within minutes.</p>
+    <section class="hero">
+      <article class="hero-card">
+        <div class="eyebrow">After Purchase</div>
+        <h1>End with momentum, not a dead receipt.</h1>
+        <p>The thank-you experience should feel like a clean continuation of the brand, not a generic dead-end receipt screen.</p>
+        <div class="actions">
+          <a class="button primary" href="./channels.html">Review Channel Follow-Up</a>
+          <a class="button ghost" href="./checkout.html">Back to Checkout Preview</a>
         </div>
-        <div class="feature-card">
-          <h3>Access Your Purchase</h3>
-          <p>Digital products are available immediately. Service engagements begin within 24 hours.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Need Help?</h3>
-          <p>Contact us at <a href="mailto:support@elevstyle.com">support@elevstyle.com</a> — we're here to help.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-content">
-        <p>&copy; 2026 Elevere. All rights reserved.</p>
-        <div class="footer-links">
-          <a href="mailto:support@elevstyle.com">Contact</a>
-          <a href="./offer.html">Catalog</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script>
-  (function(){
-    var bid='b5',page=location.pathname.split('/').pop()||'index.html';
-    var key='asi_pv_'+bid;
-    try{var d=JSON.parse(localStorage.getItem(key)||'{}');d[page]=(d[page]||0)+1;d._total=(d._total||0)+1;d._last=new Date().toISOString();d._ref=document.referrer||'direct';localStorage.setItem(key,JSON.stringify(d));}catch(e){}
-    if(window.ASI_ANALYTICS_URL){try{navigator.sendBeacon(window.ASI_ANALYTICS_URL,JSON.stringify({business_id:bid,page:page,referrer:document.referrer||'direct',timestamp:new Date().toISOString(),ua:navigator.userAgent}));}catch(e){}}
-  })();
-  </script>
+      </article>
+      <aside class="visual-side">
+
+      <figure class="visual-board visual-luxury">
+        <img class="visual-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNjIwIiB2aWV3Qm94PSIwIDAgOTAwIDYyMCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJFbGV2ZXJlIHRoYW5rIHlvdSB2aXN1YWwiPgogICAgICA8ZGVmcz4KICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeDI9IjEiIHkxPSIwIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNGRkZGRkYiLz4KICAgICAgICAgIDxzdG9wIG9mZnNldD0iLjQ4IiBzdG9wLWNvbG9yPSIjZmZmZmZmIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNGNEVGRTgiIHN0b3Atb3BhY2l0eT0iLjIyIi8+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgICAgPC9kZWZzPgogICAgICA8cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjYyMCIgcng9IjQ4IiBmaWxsPSJ1cmwoI2JnKSIvPgogICAgICAKICAgICAgICA8cmVjdCB4PSI1NCIgeT0iNjQiIHdpZHRoPSI3OTIiIGhlaWdodD0iNDkyIiByeD0iNDQiIGZpbGw9IiNGRkZGRkYiIG9wYWNpdHk9Ii45NCIvPgogICAgICAgIDxwYXRoIGQ9Ik0xOTAgNDgwIEMyMzAgMzAwIDMyNSAxODAgNDU1IDE1NiBDNTg1IDEzMiA3MDAgMjEwIDc0NCAzNjIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzdBNkE1OCIgc3Ryb2tlLXdpZHRoPSIxOCIgb3BhY2l0eT0iLjM0Ii8+CiAgICAgICAgPHJlY3QgeD0iMTEyIiB5PSIxMzIiIHdpZHRoPSIyNDQiIGhlaWdodD0iMzI0IiByeD0iMjIiIGZpbGw9IndoaXRlIiBzdHJva2U9IiNDOUE4NzYiIHN0cm9rZS13aWR0aD0iMyIvPgogICAgICAgIDxyZWN0IHg9IjM4NiIgeT0iMTEyIiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjIxNCIgcng9IjI2IiBmaWxsPSIjQzlBODc2IiBvcGFjaXR5PSIuMTIiLz4KICAgICAgICA8cmVjdCB4PSI0MTQiIHk9IjM1MiIgd2lkdGg9IjI2OCIgaGVpZ2h0PSI3OCIgcng9IjIwIiBmaWxsPSIjRjRFRkU4IiBvcGFjaXR5PSIuMjIiLz4KICAgICAgICA8Y2lyY2xlIGN4PSIyMzIiIGN5PSIyNTQiIHI9IjcyIiBmaWxsPSIjQzlBODc2IiBvcGFjaXR5PSIuMTgiLz4KICAgICAgICA8cGF0aCBkPSJNMTQ0IDM5NCBIMzIyIiBzdHJva2U9IiMxQjFCMUIiIHN0cm9rZS13aWR0aD0iNSIgb3BhY2l0eT0iLjM0Ii8+CiAgICAgICAgPHBhdGggZD0iTTQzOCAxNzYgSDY2NCBNNDM4IDIyMCBINjEwIE00MzggMjY0IEg2ODgiIHN0cm9rZT0iIzFCMUIxQiIgc3Ryb2tlLXdpZHRoPSI2IiBvcGFjaXR5PSIuMjgiLz4KICAgICAgICAKICAgICAgPHRleHQgeD0iOTIiIHk9IjU3MCIgZmlsbD0iIzFCMUIxQiIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iNzAwIj5FbGV2ZXJlPC90ZXh0PgogICAgICA8dGV4dCB4PSI5MiIgeT0iNjA0IiBmaWxsPSIjMUIxQjFCIiBvcGFjaXR5PSIuNzIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCI+QXNwaXJhdGlvbiB8IFRhc3RlIHwgV2FyZHJvYmUgc2ltcGxpZmljYXRpb248L3RleHQ+CiAgICA8L3N2Zz4=" alt="Elevere thank you visual system" loading="eager" />
+        <figcaption>
+          <strong>Post-purchase experience</strong>
+          <span>Luxury Matte</span>
+        </figcaption>
+      </figure>
+
+        <h2>Immediate Next Steps</h2>
+        <ul class="proof-points">
+          <li>Reassure the buyer what they purchased and what happens next.</li>
+          <li>Offer one tightly related follow-on only if it increases usefulness.</li>
+          <li>Route support, delivery, or onboarding links without adding clutter.</li>
+        </ul>
+      </aside>
+    </section>
+    <section class="grid-two" style="margin-top:24px;">
+      <section class="panel">
+        <h2>Brand Continuity</h2>
+        <ul>
+          <li>Luxury Matte remains in use.</li>
+          <li>Typography stays on Playfair Display, Montserrat, and Cinzel.</li>
+          <li>Palette continuity preserves recognition across email, checkout, and support.</li>
+        </ul>
+      </section>
+      <section class="panel">
+        <h2>Guardrails</h2>
+        <ul><li>No traffic until product pages and fulfillment mapping are real.</li><li>No dropship junk aesthetic.</li><li>No crowded sale banners.</li></ul>
+      </section>
+    </section>
+
+    <div class="footer-note">Powered by ASI Network. Elevere public preview surfaces stay activation-gated until owner approval.</div>
+  </main>
 </body>
 </html>

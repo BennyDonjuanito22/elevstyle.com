@@ -1,270 +1,468 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home | Elevere</title>
-  <meta name="description" content="Discover timeless, elevated fashion pieces curated for the modern professional woman. Capsule wardrobes, workweek essentials, and weekend staples with effortless style.">
-  <meta property="og:title" content="Home | Elevere">
-  <meta property="og:description" content="Discover timeless, elevated fashion pieces curated for the modern professional woman. Capsule wardrobes, workweek essentials, and weekend staples with effortless style.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://elevstyle.com/">
-  <meta property="og:image" content="https://elevstyle.com/assets/og-image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Home | Elevere">
-  <meta name="twitter:description" content="Discover timeless, elevated fashion pieces curated for the modern professional woman. Capsule wardrobes, workweek essentials, and weekend staples with effortless style.">
-  <meta name="twitter:image" content="https://elevstyle.com/assets/og-image.png">
-  <link rel="icon" href="./assets/favicon.ico">
-  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Cinzel:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elevere — Curated women's fashion</title>
+  <meta name="description" content="Curated women's fashion. Curated drops, 30-day returns, free shipping on orders over $100. Shop the collection below." />
+  <link rel="canonical" href="https://elevstyle.com" />
+  <meta property="og:title" content="Elevere — Curated women's fashion" />
+  <meta property="og:description" content="Curated women's fashion" />
+  <meta property="og:url" content="https://elevstyle.com" />
+  <style>
+    :root {
+      --c-bg: #ffffff;
+      --c-fg: #1a202c;
+      --c-muted: #4a5568;
+      --c-accent: #38b2ac;
+      --c-accent-dark: #2c7a7b;
+      --c-line: #e2e8f0;
+      --max-w: 1080px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: var(--c-fg); margin: 0; padding: 0; background: var(--c-bg);
+      line-height: 1.55;
+    }
+    header.asi-nav {
+      max-width: var(--max-w); margin: 0 auto; padding: 24px 16px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .asi-brand { font-size: 18px; font-weight: 700; letter-spacing: -0.01em; }
+    .asi-nav a { color: var(--c-fg); text-decoration: none; margin-left: 24px; font-size: 14px; }
+    .asi-nav a:hover { color: var(--c-accent); }
+
+    section.asi-hero {
+      max-width: var(--max-w); margin: 32px auto 16px; padding: 0 16px; text-align: center;
+    }
+    .asi-hero h1 { font-size: 44px; margin: 0 0 16px; line-height: 1.15; letter-spacing: -0.02em; }
+    .asi-hero p.asi-lede { font-size: 18px; color: var(--c-muted); margin: 0 auto 28px; max-width: 720px; }
+    .asi-hero-cta { display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    .asi-hero-cta a {
+      display: inline-block; padding: 14px 28px; border-radius: 10px;
+      text-decoration: none; font-weight: 600; font-size: 15px;
+    }
+    .asi-hero-cta a.is-primary { background: var(--c-fg); color: #fff; }
+    .asi-hero-cta a.is-primary:hover { background: var(--c-accent); }
+    .asi-hero-cta a.is-secondary { background: transparent; color: var(--c-fg); border: 1px solid var(--c-line); }
+
+    footer.asi-footer {
+      max-width: var(--max-w); margin: 64px auto 40px; padding: 24px 16px;
+      border-top: 1px solid var(--c-line); color: var(--c-muted); font-size: 13px;
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    }
+    footer.asi-footer a { color: var(--c-muted); margin-right: 14px; }
+    footer.asi-footer a:hover { color: var(--c-fg); }
+  </style>
+
+  <!-- Pixels (Meta + TikTok + GA4) — placeholder IDs swap at deploy time -->
+  <!--
+  Pixel block for Elevere (b5).
+  Generated 2026-05-30 by scripts/generate_conversion_partials.py.
+
+  ──────────────────────────────────────────────────────────────────────────
+  REPLACE THE THREE PLACEHOLDER IDs BELOW BEFORE GOING LIVE:
+
+    META_PIXEL_ID_B5     -> get from Meta Events Manager
+    TIKTOK_PIXEL_ID_B5   -> get from TikTok Events Manager
+    GA4_MEASUREMENT_ID_B5-> get from Google Analytics 4
+
+  Each ID can be sourced from the env (recommended) or hard-coded here.
+  When sourced from env, the build step substitutes the env value at deploy
+  time. See conversion_partials/pixel-config.json for the canonical key map.
+  ──────────────────────────────────────────────────────────────────────────
+-->
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '{{META_PIXEL_ID_B5}}');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id={{META_PIXEL_ID_B5}}&ev=PageView&noscript=1"
+/></noscript>
+
+<!-- TikTok Pixel -->
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var e=0;e<ttq.methods.length;e++)ttq.setAndDefer(ttq,ttq.methods[e]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+  ttq.load('{{TIKTOK_PIXEL_ID_B5}}');
+  ttq.page();
+}(window, document, 'ttq');
+</script>
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{GA4_MEASUREMENT_ID_B5}}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{GA4_MEASUREMENT_ID_B5}}', {
+    'send_page_view': true,
+    'transport_type': 'beacon'
+  });
+</script>
+
 </head>
-<body data-business-id="b5">
-  <header class="site-header">
-    <div class="container">
-      <a href="./index.html" class="logo"><span>E</span>levere</a>
-      <nav class="nav-links">
-    <a href="./index.html" class="active">Home</a>
-    <a href="./offer.html">Catalog</a>
-    <a href="./checkout.html">Store Status</a>
-      </nav>
+<body>
+
+<header class="asi-nav">
+  <div class="asi-brand">Elevere</div>
+  <nav>
+    <a href="#pricing">Pricing</a>
+    <a href="#guarantee">Guarantee</a>
+    <a href="/legal/return_refund_policy.html">Refunds</a>
+    <a href="mailto:elevere@asiinnovativesolutions.com">Contact</a>
+  </nav>
+</header>
+
+<section class="asi-hero">
+  <h1>Curated women's fashion. From Elevere.</h1>
+  <p class="asi-lede">Curated drops, 30-day returns, free shipping on orders over $100. Shop the collection below.</p>
+  <div class="asi-hero-cta">
+    <a href="#pricing" class="is-primary">See pricing</a>
+    <a href="#guarantee" class="is-secondary">Read the guarantee</a>
+  </div>
+</section>
+
+<section id="pricing">
+<!--
+  Pricing page for Elevere. Generated 2026-05-30.
+  Drop this entire block into the pricing section of your storefront / landing page.
+  Wire each [data-tier] link to the actual Stripe/Shopify/Gumroad checkout URL
+  for that tier before going live.
+-->
+
+<style>
+.asi-pricing {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  max-width: 1080px; margin: 48px auto; padding: 0 16px;
+  color: #1a202c;
+}
+.asi-pricing-header { text-align: center; margin-bottom: 40px; }
+.asi-pricing-header h2 { font-size: 32px; margin: 0 0 8px; }
+.asi-pricing-header p { color: #4a5568; font-size: 17px; margin: 0; }
+.asi-pricing-grid {
+  display: grid; gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: stretch;
+}
+.asi-tier {
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 14px;
+  padding: 32px 24px; display: flex; flex-direction: column;
+  position: relative; transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.asi-tier:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+.asi-tier.is-popular {
+  border-color: #38b2ac; border-width: 2px; padding: 31px 23px;
+}
+.asi-tier-badge {
+  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+  background: #38b2ac; color: #fff; font-size: 12px; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 14px;
+  border-radius: 999px;
+}
+.asi-tier-name { font-size: 18px; margin: 0 0 8px; color: #2d3748; }
+.asi-tier-price {
+  font-size: 36px; font-weight: 700; margin-bottom: 4px;
+  display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px;
+}
+.asi-tier-cadence { font-size: 13px; color: #718096; font-weight: 400; }
+.asi-tier-subtitle { color: #718096; font-size: 14px; margin: 0 0 18px; }
+.asi-tier-features { list-style: none; padding: 0; margin: 0 0 24px; flex: 1; }
+.asi-tier-features li {
+  padding: 7px 0 7px 22px; position: relative; font-size: 14px;
+  color: #2d3748; line-height: 1.45;
+}
+.asi-tier-features li::before {
+  content: "✓"; position: absolute; left: 0; color: #38b2ac; font-weight: 700;
+}
+.asi-tier-cta {
+  display: block; text-align: center; background: #1a202c; color: #fff;
+  padding: 13px 20px; border-radius: 8px; text-decoration: none;
+  font-weight: 600; font-size: 15px;
+}
+.asi-tier.is-popular .asi-tier-cta { background: #38b2ac; }
+.asi-tier-cta:hover { opacity: 0.92; }
+.asi-guarantee-callout {
+  text-align: center; margin-top: 32px; font-size: 14px; color: #4a5568;
+}
+.asi-guarantee-callout strong { color: #1a202c; }
+</style>
+
+<section class="asi-pricing" aria-label="Pricing tiers for Elevere">
+  <div class="asi-pricing-header">
+    <h2>Pick what fits your stage</h2>
+    <p>Élévere curated drops. No hidden fees. Cancel or refund per our policy.</p>
+  </div>
+  <div class="asi-pricing-grid">
+    <div class="asi-tier">
+      
+      <h3 class="asi-tier-name">Single</h3>
+      <div class="asi-tier-price">$0<span class="asi-tier-cadence">shop-pricing</span></div>
+      <p class="asi-tier-subtitle">Order any item à la carte</p>
+      <ul class="asi-tier-features"><li>Standard shipping</li><li>30-day returns</li><li>Pay-as-you-go</li></ul>
+      <a href="https://xfv8b0-1p.myshopify.com/products" class="asi-tier-cta" data-tier="single">Choose Single</a>
     </div>
-  </header>
-  <section class="hero-section">
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge">Curated Women&#x27;s Fashion for the Modern Woman</div>
-        <h1>Elevate Your Wardrobe. Simplify Your Style.</h1>
-        <p>Curated capsule collections for the woman who values quality over quantity. Every piece chosen for versatility, elegance, and effortless confidence.</p>
-        <div class="btn-group">
-          <a href="./offer.html" class="btn btn-primary">Shop the Collection</a>
-        </div>
+
+    <div class="asi-tier is-popular">
+      <div class="asi-tier-badge">Most Popular</div>
+      <h3 class="asi-tier-name">Bundle</h3>
+      <div class="asi-tier-price">Save 15%<span class="asi-tier-cadence">auto-applied</span></div>
+      <p class="asi-tier-subtitle">Two or more items qualify</p>
+      <ul class="asi-tier-features"><li>15% off all 2+ item carts</li><li>Free standard shipping over $75</li><li>Early access to new drops</li></ul>
+      <a href="https://xfv8b0-1p.myshopify.com/products?utm_source=checkout&utm_medium=tier&utm_campaign=bundle15" class="asi-tier-cta" data-tier="bundle">Choose Bundle</a>
+    </div>
+
+    <div class="asi-tier">
+      
+      <h3 class="asi-tier-name">Curated Box</h3>
+      <div class="asi-tier-price">$97/quarter<span class="asi-tier-cadence">subscription</span></div>
+      <p class="asi-tier-subtitle">Hand-picked drops + member-only pieces</p>
+      <ul class="asi-tier-features"><li>Quarterly curated box</li><li>Member-only releases</li><li>Free shipping always</li><li>Pause or cancel anytime</li></ul>
+      <a href="https://buy.stripe.com/7sYaEYd3damSc5Ogns2881L" class="asi-tier-cta" data-tier="curated box">Choose Curated Box</a>
+    </div>
+  </div>
+  <p class="asi-guarantee-callout">
+    <strong>All tiers backed by our guarantee</strong> — see <a href="/legal/return_refund_policy.html">refund policy</a>.
+  </p>
+</section>
+
+</section>
+
+<section id="guarantee">
+<!--
+  Guarantee badge for Elevere.
+  Drop this anywhere on the pricing page or near the CTA.
+  Self-contained CSS; doesn't depend on any framework.
+-->
+
+<style>
+.asi-guarantee {
+  display: flex; align-items: center; gap: 16px;
+  background: linear-gradient(135deg, #f0fff4 0%, #e6fffa 100%);
+  border: 2px solid #38b2ac; border-radius: 12px;
+  padding: 16px 20px; max-width: 560px;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  margin: 24px 0;
+}
+.asi-guarantee-icon {
+  flex: 0 0 56px; width: 56px; height: 56px; border-radius: 50%;
+  background: #38b2ac; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 14px; line-height: 1.1;
+  text-align: center; padding: 4px;
+}
+.asi-guarantee-icon span { display: block; }
+.asi-guarantee-icon .asi-guarantee-num { font-size: 20px; }
+.asi-guarantee-text h3 { margin: 0 0 4px; font-size: 16px; color: #1a4541; }
+.asi-guarantee-text p  { margin: 0; font-size: 14px; color: #2d3748; line-height: 1.4; }
+</style>
+
+<div class="asi-guarantee" role="note">
+  <div class="asi-guarantee-icon" aria-hidden="true">
+    <span class="asi-guarantee-num">30</span>
+    <span>DAY</span>
+  </div>
+  <div class="asi-guarantee-text">
+    <h3>Our guarantee</h3>
+    <p>30-day no-questions-asked returns. Unworn, unwashed, tags attached — full refund.</p>
+  </div>
+</div>
+
+</section>
+
+<section id="proof">
+<!--
+  Social-proof / testimonial rotator for Elevere.
+
+  PROOF POLICY: testimonials are NEVER fabricated. The data array starts
+  with a visible proof-policy card until real testimonials arrive. Replace
+  the array with real testimonials as soon as they arrive — do NOT generate
+  fake ones (truth-no-lying directive).
+-->
+
+<style>
+.asi-testimonials {
+  max-width: 720px; margin: 32px auto;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+.asi-testimonials h3 {
+  text-align: center; font-size: 14px; letter-spacing: 0.08em;
+  text-transform: uppercase; color: #888; margin: 0 0 16px;
+}
+.asi-testimonial-card {
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 12px;
+  padding: 24px 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+.asi-testimonial-card .asi-stars {
+  color: #f6b73b; font-size: 18px; letter-spacing: 0.04em; margin-bottom: 12px;
+}
+.asi-testimonial-card blockquote {
+  margin: 0 0 16px; font-size: 16px; color: #2d3748; line-height: 1.55;
+}
+.asi-testimonial-author { display: flex; align-items: center; gap: 12px; }
+.asi-testimonial-author .asi-avatar {
+  width: 40px; height: 40px; border-radius: 50%; background: #1f2a44;
+  color: #fff; display: flex; align-items: center; justify-content: center;
+  font-weight: 600; font-size: 14px;
+}
+.asi-testimonial-author .asi-author-meta strong {
+  display: block; color: #1a202c; font-size: 14px;
+}
+.asi-testimonial-author .asi-author-meta span {
+  color: #718096; font-size: 13px;
+}
+</style>
+
+<section class="asi-testimonials" aria-label="Customer testimonials">
+  <h3>What customers say</h3>
+  <div class="asi-testimonial-card" id="asi-testimonial-card">
+    <div class="asi-stars" id="asi-testimonial-stars" aria-label="No customer rating yet"></div>
+    <blockquote id="asi-testimonial-quote">Loading…</blockquote>
+    <div class="asi-testimonial-author">
+      <div class="asi-avatar" id="asi-testimonial-avatar">—</div>
+      <div class="asi-author-meta">
+        <strong id="asi-testimonial-name">—</strong>
+        <span id="asi-testimonial-role">—</span>
       </div>
     </div>
-  </section>
-  <section class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">Why Choose Elevere</h2>
-      <p class="section-subtitle">Here's what makes us different.</p>
-      <div class="features-grid">
-        <div class="feature-card">
-          <h3>Curated, Not Mass-Produced</h3>
-          <p>Every piece is hand-selected by our stylists for quality, versatility, and lasting appeal.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Capsule-Ready</h3>
-          <p>Shop complete capsule wardrobes or individual pieces that work with what you already own.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Quality You Can Feel</h3>
-          <p>Premium fabrics, thoughtful construction, and attention to detail in every garment.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Elevere Product Catalog</h2>
-      <p class="section-subtitle">Named apparel products from the Elevere Shopify catalog source. Public checkout stays out of the static site until Shopify domain, payment, and fulfillment verification are complete.</p>
-      <div class="catalog-meta">
-        <span class="catalog-pill">Apparel catalog preview</span>
-        <span class="catalog-pill">Shopify checkout pending</span>
-        <span class="catalog-pill">No mystery bundles</span>
-      </div>
-      <div class="catalog-grid">
-        <article class="catalog-card">
-          <div class="catalog-price">$68</div>
-          <h3>Linen Midi Dress — Relaxed Elegance</h3>
-          <p>Effortlessly chic in breathable linen. A versatile midi silhouette that transitions from desk to dinner. Features a flattering wrap detail and side pockets. 100%...</p>
-          <div class="catalog-tags">
-            <span class="catalog-tag">Dresses</span>
-            <span class="catalog-tag">active</span>
-          </div>
-          
-        </article>
-        <article class="catalog-card">
-          <div class="catalog-price">$79</div>
-          <h3>Floral Maxi Dress — Resort Ready</h3>
-          <p>A head-turning maxi in exclusive floral prints. Lightweight and flowing — perfect for warm-weather getaways or elevated weekend style. Lightweight viscose blend...</p>
-          <div class="catalog-tags">
-            <span class="catalog-tag">Dresses</span>
-            <span class="catalog-tag">active</span>
-          </div>
-          
-        </article>
-        <article class="catalog-card">
-          <div class="catalog-price">$95</div>
-          <h3>Satin Cocktail Dress — Evening Edition</h3>
-          <p>Sleek satin with a modern cowl neckline. The go-to for date nights, weddings, and special occasions. Silky satin finish Cowl neckline Adjustable straps Hidden back zip...</p>
-          <div class="catalog-tags">
-            <span class="catalog-tag">Dresses</span>
-            <span class="catalog-tag">active</span>
-          </div>
-          
-        </article>
-        <article class="catalog-card">
-          <div class="catalog-price">$58</div>
-          <h3>Silk Button-Front Blouse</h3>
-          <p>Our signature silk blouse — polished enough for the boardroom, relaxed enough for brunch. Timeless button-front design in luxe washable silk. 100% mulberry silk...</p>
-          <div class="catalog-tags">
-            <span class="catalog-tag">Tops</span>
-            <span class="catalog-tag">active</span>
-          </div>
-          
-        </article>
-        <article class="catalog-card">
-          <div class="catalog-price">$32</div>
-          <h3>Organic Cotton Elevated Tee</h3>
-          <p>The tee that replaces five. Premium organic cotton with a structured drape that looks intentional, not sloppy. Slightly cropped for modern proportion. 100%...</p>
-          <div class="catalog-tags">
-            <span class="catalog-tag">Tops</span>
-            <span class="catalog-tag">active</span>
-          </div>
-          
-        </article>
-        <article class="catalog-card">
-          <div class="catalog-price">$78</div>
-          <h3>Cashmere Blend Crewneck Sweater</h3>
-          <p>Luxurious cashmere blend that feels indulgent and looks effortless. A wardrobe staple for layering or wearing solo. 70% merino wool, 30% cashmere Ribbed cuffs and hem...</p>
-          <div class="catalog-tags">
-            <span class="catalog-tag">Tops</span>
-            <span class="catalog-tag">active</span>
-          </div>
-          
-        </article>
-        <article class="catalog-card">
-          <div class="catalog-price">$72</div>
-          <h3>High-Waisted Tailored Trouser</h3>
-          <p>Polished tailoring meets all-day comfort. A high-waisted wide-leg trouser with a hidden elastic waistband. Available in petite, regular, and tall lengths. Stretch cotton...</p>
-          <div class="catalog-tags">
-            <span class="catalog-tag">Bottoms</span>
-            <span class="catalog-tag">active</span>
-          </div>
-          
-        </article>
-        <article class="catalog-card">
-          <div class="catalog-price">$85</div>
-          <h3>Premium Straight-Leg Denim</h3>
-          <p>The perfect jean. Sustainably made from recycled cotton with just the right amount of stretch. A timeless straight-leg fit that flatters every body. 92% recycled cotton...</p>
-          <div class="catalog-tags">
-            <span class="catalog-tag">Bottoms</span>
-            <span class="catalog-tag">active</span>
-          </div>
-          
-        </article>
-        <article class="catalog-card">
-          <div class="catalog-price">$145</div>
-          <h3>Oversized Single-Breasted Blazer</h3>
-          <p>The power piece. An oversized blazer that elevates everything underneath. Structured shoulders, relaxed body — the perfect balance. Wool-blend outer Fully lined...</p>
-          <div class="catalog-tags">
-            <span class="catalog-tag">Outerwear</span>
-            <span class="catalog-tag">active</span>
-          </div>
-          
-        </article>
-        <article class="catalog-card">
-          <div class="catalog-price">$195</div>
-          <h3>Classic Cotton Trench Coat</h3>
-          <p>A wardrobe icon reimagined. Water-resistant cotton with a modern relaxed fit. Double-breasted with a removable belt. Water-resistant cotton blend Double-breasted closure...</p>
-          <div class="catalog-tags">
-            <span class="catalog-tag">Outerwear</span>
-            <span class="catalog-tag">active</span>
-          </div>
-          
-        </article>
-        <article class="catalog-card">
-          <div class="catalog-price">$42</div>
-          <h3>Printed Silk Scarf</h3>
-          <p>The finishing touch for any outfit. A versatile silk scarf in exclusive prints — wear it around your neck, as a headband, or tied to your bag. 100% mulberry silk 27x27in...</p>
-          <div class="catalog-tags">
-            <span class="catalog-tag">Accessories</span>
-            <span class="catalog-tag">active</span>
-          </div>
-          
-        </article>
-        <article class="catalog-card">
-          <div class="catalog-price">$48</div>
-          <h3>Italian Leather Waist Belt</h3>
-          <p>A sleek leather belt that cinches blazers, dresses, and high-waisted trousers. Gold-tone hardware and a clean, modern buckle. Genuine Italian leather Gold-tone buckle...</p>
-          <div class="catalog-tags">
-            <span class="catalog-tag">Accessories</span>
-            <span class="catalog-tag">active</span>
-          </div>
-          
-        </article>
-      </div>
-    </div>
-  </section>
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">How It Works</h2>
-      <p class="section-subtitle">Simple, clear, and designed to get you results fast.</p>
-      <div class="process-grid">
-        <div class="process-step">
-          <h3>1. Browse Collections</h3>
-          <p>Shop by capsule wardrobe, occasion, or individual pieces.</p>
-        </div>
-        <div class="process-step">
-          <h3>2. Check Your Fit</h3>
-          <p>Use our detailed fit guide to find your perfect size.</p>
-        </div>
-        <div class="process-step">
-          <h3>3. Receive &amp; Style</h3>
-          <p>Your order arrives with styling suggestions and care instructions.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">Frequently Asked Questions</h2>
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary>What sizes do you carry?</summary>
-          <p>We carry sizes XS through 2XL. Detailed measurements are available on each product page.</p>
-        </details>
-        <details class="faq-item">
-          <summary>What&#x27;s your return policy?</summary>
-          <p>Free returns within 30 days. Items must be unworn with tags attached.</p>
-        </details>
-        <details class="faq-item">
-          <summary>How do capsule wardrobes work?</summary>
-          <p>Each capsule includes 5-7 pieces designed to create 15+ outfits. A styling guide comes with every set.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Where do you source your pieces?</summary>
-          <p>We partner with ethical manufacturers who prioritize quality materials and fair labor practices.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-  <section class="cta-section">
-    <div class="container">
-      <h2>Ready to Get Started?</h2>
-      <p>Curated Women&#x27;s Fashion for the Modern Woman</p>
-      <a href="./offer.html" class="btn btn-primary">Shop the Collection</a>
-    </div>
-  </section>
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-content">
-        <p>&copy; 2026 Elevere. All rights reserved.</p>
-        <div class="footer-links">
-          <a href="mailto:support@elevstyle.com">Contact</a>
-          <a href="./offer.html">Catalog</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script>
-  (function(){
-    var bid='b5',page=location.pathname.split('/').pop()||'index.html';
-    var key='asi_pv_'+bid;
-    try{var d=JSON.parse(localStorage.getItem(key)||'{}');d[page]=(d[page]||0)+1;d._total=(d._total||0)+1;d._last=new Date().toISOString();d._ref=document.referrer||'direct';localStorage.setItem(key,JSON.stringify(d));}catch(e){}
-    if(window.ASI_ANALYTICS_URL){try{navigator.sendBeacon(window.ASI_ANALYTICS_URL,JSON.stringify({business_id:bid,page:page,referrer:document.referrer||'direct',timestamp:new Date().toISOString(),ua:navigator.userAgent}));}catch(e){}}
-  })();
-  </script>
+  </div>
+</section>
+
+<script>
+(function () {
+  var TESTIMONIALS = [
+  {
+    "name": "Proof policy active",
+    "role": "Verified customer outcomes pending",
+    "quote": "Elevere publishes only verified customer feedback. Until approved reviews exist, this panel confirms that no testimonials have been fabricated.",
+    "avatar_initials": "PP",
+    "rating": 0
+  }
+];
+  var idx = 0;
+  function render() {
+    var t = TESTIMONIALS[idx];
+    if (!t) return;
+    document.getElementById('asi-testimonial-quote').textContent = t.quote;
+    document.getElementById('asi-testimonial-name').textContent = t.name;
+    document.getElementById('asi-testimonial-role').textContent = t.role || '';
+    document.getElementById('asi-testimonial-avatar').textContent = t.avatar_initials || '—';
+    var rating = Math.max(0, Math.min(5, parseInt(t.rating || 0, 10)));
+    var stars = document.getElementById('asi-testimonial-stars');
+    stars.textContent = rating ? '★★★★★'.slice(0, rating) : '';
+    stars.setAttribute('aria-label', rating ? rating + ' out of 5 stars' : 'No customer rating yet');
+  }
+  render();
+  // Rotate every 8s when there are 2+
+  if (TESTIMONIALS.length > 1) {
+    setInterval(function () {
+      idx = (idx + 1) % TESTIMONIALS.length;
+      render();
+    }, 8000);
+  }
+})();
+</script>
+
+</section>
+
+<footer class="asi-footer">
+  <div>
+    © 2026 Asi Innovative Solutions Llc · EIN 41-3542136
+    <br />
+    <small>820 MAIN LN APT 1129, ORLANDO, FL 32801</small>
+  </div>
+  <div>
+    <a href="/legal/privacy_policy.html">Privacy</a>
+    <a href="/legal/terms_of_service.html">Terms</a>
+    <a href="/legal/return_refund_policy.html">Refunds</a>
+    <a href="mailto:elevere@asiinnovativesolutions.com">Email</a>
+  </div>
+</footer>
+
+<!-- Exit-intent modal -->
+<!--
+  Exit-intent modal for Elevere.
+  Vanilla JS. Triggers when the cursor leaves the viewport from the top.
+  One-shot per session (controlled by sessionStorage).
+
+  Drop this entire block somewhere near the closing </body> tag of any
+  page where you want the offer to fire.
+-->
+
+<style>
+.asi-exit-modal-backdrop {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.6);
+  display: none; align-items: center; justify-content: center;
+  z-index: 9999;
+}
+.asi-exit-modal-backdrop.is-open { display: flex; }
+.asi-exit-modal {
+  background: #fff; max-width: 480px; width: calc(100% - 32px);
+  border-radius: 12px; padding: 32px; text-align: center;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+  animation: asi-pop-in 0.3s ease-out;
+}
+@keyframes asi-pop-in {
+  from { opacity: 0; transform: scale(0.92) translateY(12px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+.asi-exit-modal h2 { font-size: 24px; margin: 0 0 12px; line-height: 1.2; }
+.asi-exit-modal p  { color: #555; margin: 0 0 20px; font-size: 15px; line-height: 1.5; }
+.asi-exit-modal-code {
+  display: inline-block; background: #f4f6fa; border: 2px dashed #c7d0e0;
+  padding: 12px 20px; font-family: ui-monospace, monospace; font-size: 18px;
+  letter-spacing: 0.08em; margin: 8px 0 20px; color: #1f2a44;
+}
+.asi-exit-modal-cta {
+  display: inline-block; background: #1f2a44; color: #fff;
+  padding: 12px 28px; border-radius: 8px; text-decoration: none;
+  font-weight: 600; font-size: 15px;
+}
+.asi-exit-modal-close {
+  position: absolute; top: 16px; right: 16px; background: transparent;
+  border: 0; font-size: 22px; cursor: pointer; color: #888;
+}
+</style>
+
+<div class="asi-exit-modal-backdrop" id="asi-exit-modal" role="dialog" aria-modal="true" aria-labelledby="asi-exit-title">
+  <div class="asi-exit-modal" style="position: relative;">
+    <button class="asi-exit-modal-close" aria-label="Close" onclick="asiExitClose()">×</button>
+    <h2 id="asi-exit-title">Wait — 10% off, on us</h2>
+    <p>Don't leave empty-handed. Use the code below at checkout for 10% off your first order from Elevere.</p>
+    <div class="asi-exit-modal-code">WELCOME10</div>
+    <a href="#pricing" class="asi-exit-modal-cta" onclick="asiExitClose()">Claim my 10% off</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var fired = false;
+  function open()  { document.getElementById('asi-exit-modal').classList.add('is-open'); fired = true; sessionStorage.setItem('asiExitFired', '1'); }
+  function close() { document.getElementById('asi-exit-modal').classList.remove('is-open'); }
+  window.asiExitClose = close;
+  if (sessionStorage.getItem('asiExitFired') === '1') return;
+  document.addEventListener('mouseleave', function(e) {
+    if (fired) return;
+    if (e.clientY <= 0) open();
+  });
+  document.getElementById('asi-exit-modal').addEventListener('click', function(e) {
+    if (e.target.id === 'asi-exit-modal') close();
+  });
+})();
+</script>
+
+
 </body>
 </html>
